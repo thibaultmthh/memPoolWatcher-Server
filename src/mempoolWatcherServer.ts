@@ -63,7 +63,7 @@ watcher.setCallback(newTxCallback)
 ipc.serve(() => {
     newTxCallbackIPC = (data: any) => {
         
-        ipc.server.broadcast("x", data);
+        ipc.server.broadcast("tx", data);
     }
 
     ipc.server.on('message', (data, socket) => {
